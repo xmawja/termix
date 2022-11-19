@@ -96,32 +96,50 @@ unsigned int tabspaces = 8;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"black",
+	/*"black",
 	"red3",
 	"green3",
 	"yellow3",
 	"blue2",
 	"magenta3",
 	"cyan3",
-	"gray90",
+	"gray90",*/
+
+	"#403E41",
+	"#FF6188",
+	"#A9DC76",
+	"#FFD866",
+	"#FC9867",
+	"#AB9DF2",
+	"#78DCE8",
+	"#FCFCFA",
 
 	/* 8 bright colors */
-	"gray50",
+	/*"gray50",
 	"red",
 	"green",
 	"yellow",
 	"#5c5cff",
 	"magenta",
 	"cyan",
-	"white",
+	"white",*/
+
+	"#727072",
+	"#FF6188",
+	"#A9DC76",
+	"#FFD866",
+	"#FC9867",
+	"#AB9DF2",
+	"#78DCE8",
+	"#FCFCFA",
 
 	[255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#cccccc",
 	"#555555",
-	"gray90", /* default foreground colour */
-	"black", /* default background colour */
+	"#FCFCFA", /* default foreground colour */
+	"#2D2A2E", /* default background colour */
 };
 
 
@@ -174,6 +192,7 @@ static uint forcemousemod = ShiftMask;
  * Internal mouse shortcuts.
  * Beware that overloading Button1 will disable the selection.
  */
+
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
 	{ XK_ANY_MOD,           Button4, kscrollup,      {.i = 1},		0, /* !alt */ -1 },
